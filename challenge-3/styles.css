@@ -1,0 +1,126 @@
+:root {
+    --moderate-violet: hsl(263, 55%, 52%);
+    --dark-grey-blue: hsl(217, 19%, 35%);
+    --dark-black-blue: hsl(219, 29%, 14%);
+    --light-grey: hsl(0, 0%, 81%);
+    --light-grey-blue: hsl(210, 46%, 95%);
+    --basd: #a775f1
+
+    --font-small: 0.688rem;
+    --font-regular: 0.813rem;
+    --font-large: 1.25rem;
+}
+
+/* Utilities */
+.bg-violet {
+    background-color: var(--moderate-violet);
+}
+
+.bg-grey {
+    background-color: var(--dark-grey-blue);
+}
+
+.bg-black {
+    background-color: var(--dark-black-blue);
+}
+
+.bg-white {
+    background-color: white;
+}
+
+.bg-quote {
+    background-image: url("images/bg-pattern-quotation.svg");
+    background-repeat: no-repeat;
+    background-position: top right 10%;
+}
+
+.border-blue {
+    border: 2px solid #a775f1;
+}
+
+.border-clear {
+    border: 2px solid transparent;
+}
+
+.border-grey {
+    border-color: var(--light-grey);
+}
+
+.font-white {
+    color: white;
+}
+
+.font-dark {
+    color: var(--dark-black-blue);
+}
+
+
+/* Components */
+body {
+    background-color: var(--light-grey-blue);
+}
+
+main {
+    font-size: var(--font-regular);
+    font-family: "Barlow Semi Condensed";
+    margin: auto;
+}
+
+.testimonial-grid {
+    max-width: 70rem;
+    display:grid;
+    gap: 1.5rem;
+}
+
+@media screen and (min-width: 35rem) {
+    .testimonial-grid{
+
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .grid-col-span-2 {
+        grid-column: span 2;
+    }
+
+    .testimonial:last-child {
+        grid-column-start: 4;
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+}
+
+
+.testimonial {
+    padding: 2rem;
+    border-radius: 0.5rem;
+}
+
+.author > img {
+    width: 1.75rem;
+    float: left;
+    border-radius: 100%;
+    overflow: hidden;
+    margin-right: 1rem;
+}
+
+.author .name {
+    font-size: var(--font-regular);
+    font-weight: 500;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.author .title {
+    opacity: 0.5;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    font-size: var(--font-small);
+}
+
+.testimonial > p:first-of-type {
+    font-size: var(--font-large);
+}
+
+.testimonial > p:last-of-type {
+    opacity: 0.7;
+}
